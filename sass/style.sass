@@ -1,0 +1,859 @@
+*
+	font-family: 'Montserrat', sans-serif
+
+.header
+	display: flex
+	justify-content: space-between
+	align-items: flex-end
+	&_logo
+		margin-bottom: 15px
+		max-width: 250px
+		max-height: 45px
+	&_secondary
+		background-color: #302E2D
+	
+.header-mobile
+	display: none
+
+.hamburger
+	display: none
+
+.menu
+	display: flex
+	justify-content: space-between
+	list-style-type: none
+	padding: 0
+	&_item
+		padding-right: 14px
+		&:last-child
+			padding: 0
+	&_link
+		position: relative
+		font-size: 20px;
+		font-weight: 300
+		color: #ffffff
+		transition: color .2s linear
+		&:hover
+			text-decoration: none
+			color: #FF6700
+		&:after
+			content: ""
+			position: absolute
+			display: block
+			width: 100%
+			height: 3px
+			background-color: #FF6700
+			opacity: 0
+			transition: opacity .2s linear
+		&:hover:after
+			opacity: 1
+
+.footer_menu
+	display: flex
+	justify-content: space-between
+	list-style-type: none
+	padding: 0
+	&_item
+		padding-right: 14px
+		&:last-child
+			padding: 0
+	&_link
+		position: relative
+		font-size: 20px;
+		font-weight: 300
+		color: #ffffff
+		transition: color .2s linear
+		&:hover
+			text-decoration: none
+			color: #FF6700
+		&:after
+			content: ""
+			position: absolute
+			display: block
+			width: 100%
+			height: 3px
+			background-color: #FF6700
+			opacity: 0
+			transition: opacity .2s linear
+		&:hover:after
+			opacity: 1	
+
+.call
+	display: flex
+	flex-direction: column
+	padding-bottom: 5px
+
+	&_descr
+		font-weight: 500
+		font-size: 13px
+		line-height: 13px
+		padding-left: 20px
+		color: #ffffff
+	&_phone
+		display: block
+		position: relative
+		font-weight: 500
+		font-size: 26px
+		line-height: 26px
+		color: #ffffff
+		padding-left: 20px
+		&:before
+			content: url('../icons/call.png')
+			position: absolute
+			left: -5px
+		&:hover
+			text-decoration: none
+			color: #FF6700
+	&_btn
+		width: 206px
+		height: 51px
+		background: linear-gradient(180deg, #FFB800 0%, #FF6700 100%)
+		border-radius: 33px	
+		font-weight: 500
+		font-size: 18px
+		color: #ffffff
+		border: none
+		transition: .3s all linear
+		&:hover
+			background: #ffffff
+			color:  #FF6700
+		
+.intro
+	min-height: 1226px
+	background: url('../images/bg/balcony_bg.jpg') center (center / cover) no-repeat
+	padding: 20px 0 20px 0
+	&_header
+		position: relative
+		font-weight: 700
+		font-size: 64px
+		line-height: 78px
+		text-align: center
+		color: #FFFFFF
+		margin-top: 100px
+		&:after
+			content: ""
+			position: absolute
+			display: block
+			margin-top: 25px
+			left: 50%
+			transform: translateX(-50%)
+			width: 60px
+			height: 3px
+			background-color: #ffffff
+			
+	&_descr
+		margin-top: 60px
+		font-weight: 500
+		font-size: 32px
+		line-height: 39px
+		text-align: center
+		color: #FFFFFF
+	&_btn
+		display: block
+		width: 496px
+		height: 102px
+		background: linear-gradient(180deg, #FFB800 0%, #FF6700 100%)
+		border-radius: 122px
+		border: none
+		font-weight: 500
+		font-size: 32px
+		line-height: 39px
+		color: #ffffff
+		text-align: center
+		transition: .3s all linear
+		margin: 125px auto 0 auto
+		&:hover
+			background: #ffffff
+			color:  #FF6700
+
+.subheader
+	font-weight: 700
+	font-size: 48px
+	text-align: center
+	color: #333333
+	text-transform: uppercase;
+	&::after
+		content: ""
+		display: block
+		margin: 20px auto 0 auto
+		width: 60px
+		height: 3px
+		background-color: #FF6700
+	&_white
+		color: #ffffff
+		&::after
+			background-color: #ffffff
+
+.subdescr
+	font-weight: 500
+	font-size: 20px
+	text-align: center
+	color: #999999
+	margin-top: 50px
+	&_white
+		color: #ffffff
+
+.services
+	min-height: 1000px
+	padding: 32px 0 
+	.row
+		margin-top: 50px
+	&_item
+		position: relative;
+		margin: 0 auto 100px auto
+		width: 350px
+		&::before
+				content: ""
+				display: block
+				position: absolute;
+				top: -10px
+				width: 100%
+				height: 10px
+				background-color: #FF6700
+		&_image
+			width: inherit
+		&_subtitle
+			font-weight: 700
+			font-size: 26px
+			text-align: center
+			color: #333333
+			text-transform: uppercase
+			margin-top: 10px
+		&_descr
+			font-weight: 500
+			font-size: 18px
+			line-height: 22px
+			text-align: center
+			color: #999999
+			margin-top: 5px
+	
+.formBlock
+	min-height: 600px
+	padding: 40px 0 80px 0
+	background-color: #333333
+	background: url('../images/bg/form_bg.jpg') center (center / cover) no-repeat
+	&_mainForm
+		display: flex
+		flex-direction: column
+		margin: 50px auto 0 auto
+		width: 365px
+		input
+			margin-bottom: 24px	
+			height: 54px
+			border: none
+			border-radius: 26px
+			padding: 0 20px 0 20px
+			font-weight: 300
+			font-size: 20px
+			color: #333333;
+	&_btn
+		width: 365px
+		height: 70px
+		background: linear-gradient(180deg, #FFB800 0%, #FF6700 100%)
+		border-radius: 122px
+		border: none
+		font-weight: 500
+		font-size: 24px
+		color: #ffffff
+		transition: .3s all linear
+		&:hover
+			background: #ffffff
+			color:  #FF6700
+			text-decoration: none
+
+.scheme
+	min-height:	500px
+	padding-top: 20px
+	.row
+		margin-top: 50px;
+	&_item
+		margin-bottom: 35px
+	&_icon
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 150px
+		height: 150px
+		background: linear-gradient(180deg, #FFB800 0%, #FF6700 100%);
+		border-radius: 100%
+		margin: 0 auto
+		&_4
+			position: relative
+			img
+				position: absolute;
+				right: 20px
+	&_descr
+		width: 170px
+		margin: 0 auto
+	&_subtitle
+		font-weight: 700
+		font-size: 12px
+		line-height: 15px
+		text-align: center
+		margin-top: 5px
+		&_1
+			&::before
+				content: "1."
+				color: #FF6700
+		&_2
+			&::before
+				content: "2."
+				color: #FF6700
+		&_3
+			&::before
+				content: "3."
+				color: #FF6700
+		&_4
+			&::before
+				content: "4."
+				color: #FF6700
+		&_5
+			&::before
+				content: "5."
+				color: #FF6700
+		&_6
+			&::before
+				content: "6."
+				color: #FF6700
+		
+	&_txt
+		font-weight: 500
+		font-size: 12px
+		line-height: 15px
+		text-align: center
+		color: #999999
+
+.works
+	min-height: 1000px
+	background-color: #1D1B1A
+	padding: 50px 0
+	&_btn
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 300px
+		height: 70px
+		background: linear-gradient(180deg, #FFB800 0%, #FF6700 100%)
+		border-radius: 122px
+		border: none
+		font-weight: 500
+		font-size: 24px
+		color: #ffffff
+		transition: .3s all linear
+		margin: 50px auto 0 auto
+		&:hover
+			background: #ffffff
+			color:  #FF6700
+			text-decoration: none
+
+.carousel
+	margin-top: 100px
+	&::before
+		content: ""
+		display: block
+		top: -10px
+		width: 100%
+		height: 10px
+		background-color: #FF6700
+
+.footer
+	min-height: 200px
+	padding: 20px 0
+	background-color: #302E2D
+	&_divider
+		width: 420px
+		height: 8px
+		left: 750px
+		top: 4693px
+		background: #FF6700
+		margin: 0 auto
+	&_wrapper
+		margin-top: 10px
+		display: flex
+		justify-content: space-around
+		align-items: center
+	&_logo
+		margin-bottom: 15px
+		max-width: 250px
+		max-height: 45px
+	&_menu_link
+		&:after
+			display: none
+	&_privacy
+		display: flex
+		justify-content: center
+		&_link
+			font-weight: 500
+			font-size: 16px
+			color: #FFFFFF
+			&:hover
+				text-decoration: none
+				color: #FF6700
+	&_copyright
+		display: flex
+		justify-content: center
+		font-weight: 300
+		font-size: 16px
+		color: #FFFFFF
+		margin-top: 10px
+
+	
+.privacy
+	min-height: 2220px
+	background-color: #1D1B1A
+	padding: 30px 0 30px 0
+	&_info
+		margin: 0 auto
+		width: 1140px
+		height: 2150px
+		background-color: #ffffff
+		padding: 20px 45px 25px 30px
+	&_txt
+		font-size: 16px
+		line-height: 20px
+
+.gallery
+	min-height: 1000px
+	background-color: #1D1B1A
+	.row
+		margin-top: 25px
+	&_title
+		&::after
+			display: none
+	&_item
+		display: flex
+		justify-content: center
+		position: relative
+		width: 350px
+		margin: 0 auto 50px auto
+		&::before
+			content: ""
+			display: block
+			position: absolute
+			top: -8px
+			width: inherit
+			height: 8px
+			background-color: #FF6700
+	&_img
+		width: inherit
+		
+		
+
+@media (max-width: 1199px )
+
+	.header
+		&_logo
+			margin-bottom: 10px
+
+	.menu
+		&_link
+			font-size: 15px
+	
+	.call
+		&_btn
+			width: 190px
+			height: 45px
+		&_phone
+			font-size: 23px
+		&_descr
+			font-size: 12px
+
+	.intro
+		&_header
+			font-size: 58px
+			line-height: 74px
+		&_descr
+			font-size: 28px
+	
+	.services
+		.subdescr
+			margin-top: 30px
+		&_item
+			width: 300px
+			&_subtitle
+				font-size: 23px
+			&_descr
+				font-size: 16px
+			
+	.gallery
+		&_item
+			width: 300px
+
+	.privacy
+		min-height: 2600px
+		&_header
+			font-size: 28px
+		&_info
+			height: 2550px
+			width: 900px
+
+@media (max-width: 991px )
+
+	.header
+		&_logo
+			margin-bottom: 15px
+			width: 160px
+	
+	.menu
+		&_item
+			padding-right: 5px
+		&_link
+			font-size: 13px
+	
+	.call
+		&_btn
+			width: 145px
+			height: 40px
+			font-size: 14px
+		&_phone
+			font-size: 16px
+			line-height: 22px
+		&_descr
+			font-size: 9px
+	
+	.intro
+		&_header
+			font-size: 54px
+			line-height: 70px
+		&_descr
+			font-size: 24px
+			line-height: 36px
+		&_btn
+			width: 400px
+			height: 80px
+			font-size: 26px
+		
+	.subheader
+		font-size: 40px
+	
+	.subdescr
+		font-size: 14px
+		margin-top: 28px
+	
+	.services
+		.subdescr
+			margin-top: 25px
+		&_item
+			&_subtitle
+				font-size: 20px
+				margin-top: 5px
+			&_descr
+				font-size: 14px
+
+	.works
+		min-height: 800px
+		
+	.footer
+		&_logo
+			width: 135px
+		&_privacy
+			&_link
+				font-size: 12px
+		&_copyright
+			font-size: 14px
+	
+	.gallery
+		&_item
+			width: 328px
+
+	.privacy
+		min-height: 3100px
+		&_header
+			font-size: 28px
+		&_info
+			height: 3040px
+			width: 720px		
+
+@media (max-width: 767px )
+
+	.header
+		display: none
+	
+	.header-mobile
+		display: flex
+		justify-content: start
+		align-items: center
+		position: fixed
+		width: 100%
+		height: 64px
+		background-color: rgba(0,0,0, .5)
+		z-index: 2
+	
+	.call_btn
+		width: 128px
+		margin-left: 10px
+
+	.header_logo
+		margin: 0
+		width: 250px
+		margin-left: 80px
+	
+	.menu
+		position: fixed
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		top: 0
+		left: -100%
+		width: 60%
+		height: 100vh
+		padding: 20px 15px
+		background-color: rgba(0,0,0, .8)
+		transition: 0.6s all
+		&_active
+			left: 0
+		&_item
+			padding-right: 0
+			border: none
+			margin: 20px 0
+		&_link
+			font-size: 21px
+	
+	.hamburger
+		width: 50px
+		height: 25px
+		display: block
+		position: absolute
+		right: 10px
+		top: 20px
+		span
+			display: block
+			height: 5px
+			width: 100%
+			background-color: #fff
+			margin-bottom: 5px
+			transition: 0.5s all  
+			&:nth-child(3)
+				margin: 0
+		&_active
+			span
+				background-color: #FF6700
+				margin-bottom: -5px
+				&:nth-child(1)
+					transform: translateY(10px) rotate(-45deg)
+				&:nth-child(2)
+					display: none
+				&:nth-child(3)
+					transform: translateY(10px) rotate(45deg) 
+
+	.hamburger-logo
+			margin: 0
+			width: 250px
+	
+	.footer
+		&_menu
+			&_link
+				display: none
+		&_logo
+			width: 225px
+		&_divider
+			width: 280px
+	
+	.call
+		&_descr
+			font-size: 16px
+			margin-bottom: 5px
+		&_phone
+			font-size: 24px
+			margin-bottom: 5px
+		
+	.intro
+		min-height: 1000px
+		&_header
+			line-height: 60px
+			font-size: 48px
+			margin-top: 75px
+		&_descr
+			font-size: 20px
+    		line-height: 32px
+			margin-top: 40px
+		&_btn
+			width: 380px
+			font-size: 24px
+			margin-top: 50px
+
+	.services
+		padding-bottom: 0
+		.subheader
+			font-size: 36px
+		.subdescr
+			margin-top: 20px
+		&_item
+			width: 400px
+			margin-bottom: 75px
+			&_subtitle
+				font-size: 24px
+		
+	.formBlock
+		.subheader
+			font-size: 36px
+	
+	.scheme
+		.subheader
+			font-size: 36px
+		&_icon
+			width: 200px
+			height: 200px
+			&_4 
+				img
+					right: 45px
+	
+	.works
+		min-height: 700px
+		.carousel
+			margin-top: 50px
+		
+	.gallery
+		padding-top: 75px
+		&_item
+			width: 450px
+	
+	.privacy
+		min-height: 3100px
+		padding-top: 75px
+		&_header
+			font-size: 24px
+		&_info
+			height: 4340px
+			width: 520px
+
+	
+
+
+@media (max-width: 575px )
+
+	.xs-hidden
+		display: none
+
+	.header
+		display: none
+
+
+	.menu
+		width: 80%
+
+	.header-mobile
+		
+		.call_btn
+			margin-left: 5px
+			width: 102px
+			height: 35px
+			font-size: 9px
+		.header_logo
+			width: 150px
+			margin-left: 5px
+
+	.hamburger
+		width: 35px
+		height: 19px
+		top: 25px
+		span
+			height: 3px
+			margin-bottom: 5px
+		&_active
+			span
+				margin-bottom: -3px
+				&:nth-child(1)
+					transform: translateY(5px) rotate(-45deg)
+				&:nth-child(3)
+					transform: translateY(5px) rotate(45deg)
+
+		
+	.intro
+		min-height: 600px
+		&_header
+			font-size: 34px
+			line-height: 36px
+			margin-top: 55px
+		&_descr
+			font-size: 18px
+			line-height: 20px
+			margin-top: 50px
+		&_btn
+			width: 284px
+			margin-top: 10px
+			height: 50px
+			font-size: 17px
+
+	
+	
+	.services
+		.subheader
+			font-size: 32px
+		&_item
+			width: 280px
+			margin-bottom: 40px
+				
+		
+	
+	.formBlock
+		.subheader
+			font-size: 32px
+		&_mainForm
+			width: 280px
+			margin-top: 20px
+		&_btn
+			width: 280px
+			height: 60px
+			font-size: 18px
+
+	.scheme
+		.subheader
+			font-size: 32px
+	
+	.works
+		padding: 25px 0
+		min-height: 560px
+		.subheader
+			font-size: 32px
+		&_btn
+			width: 280px
+			height: 60px
+			font-size: 22px
+	
+
+	.footer
+		&_wrapper
+			flex-direction: column
+		&_divider
+			width: 200px
+			height: 5px
+		&_logo
+			width: 250px
+			margin-bottom: 0
+		.call
+			margin-right: 20px auto
+			&_descr
+				font-size: 16px
+				margin-bottom: 2px
+				text-align: center
+			&_phone
+				font-size: 24px
+				margin-bottom: 2px
+        
+	.gallery
+		&_item
+			width: 300px
+			margin-bottom: 35px
+	
+	.privacy
+		min-height: 3100px
+		padding-top: 75px
+		&_header
+			font-size: 20px
+		&_info
+			height: 4500px
+			width: 300px
+		&_txt
+			font-size: 12px
+			line-height: 14px
+	
+	
+
+	
+
+	
+		
+
+
+
