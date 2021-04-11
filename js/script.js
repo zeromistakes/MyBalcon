@@ -15,3 +15,31 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// modal
+
+$("[data-modal=consultation]").on("click", function () {
+  $(".overlay, #consultation").fadeIn("300");
+});
+
+$(".popup_close").on("click", function () {
+  $(".overlay, #consultation, #thanks").fadeOut("300");
+});
+
+// form sending
+
+$("form").submit(function (e) {
+  e.preventDefault();
+  $.ajax({
+    type: "POST",
+    url: "mailer/smart.php",
+    data: $(this).serialize(),
+  }).done(function () {
+    $(this).find("input").val("");
+    $("#consultation").fadeOut("300");
+    $(".overlay, #thanks").fadeIn("300");
+
+    $("form").trigger("reset");
+  });
+  return false;
+});

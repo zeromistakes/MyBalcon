@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MyBalcon</title>
+    <link rel="shortcut icon" href="icons/favicon.png" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -11,7 +12,6 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css" />
-    <link rel="stylesheet" href="css/bootstrap-grid.min.css" />
     <link rel="stylesheet" href="css/style.min.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -21,7 +21,7 @@
   </head>
   <body>
     <header class="header-mobile">
-      <button class="call_btn">Заказать замер</button>
+      <button data-modal="consultation" class="call_btn">Заказать замер</button>
 
       <nav class="nav">
         <ul class="menu">
@@ -85,7 +85,9 @@
           <div class="call">
             <div class="call_descr">звоните нам ежедневно</div>
             <a href="tel:0675281683" class="call_phone">067 528 16 83</a>
-            <button class="call_btn">Заказать замер</button>
+            <button data-modal="consultation" class="call_btn">
+              Заказать замер
+            </button>
           </div>
         </header>
         <h1 class="intro_header">
@@ -107,7 +109,9 @@
             commodo consequat.
           </span>
         </div>
-        <button class="intro_btn">Бесплатная консультация</button>
+        <button data-modal="consultation" class="intro_btn">
+          Бесплатная консультация
+        </button>
       </div>
     </section>
     <section id="services" class="services">
@@ -220,14 +224,28 @@
           специалиста
         </div>
         <form action="#" class="formBlock_mainForm">
-          <input required name="name" placeholder="Ваше имя*" type="text" />
           <input
             required
+            minlength="2"
+            maxlength="12"
+            name="name"
+            placeholder="Ваше имя*"
+            type="text"
+          />
+          <input
+            required
+            minlength="10"
+            maxlength="15"
             name="phone"
             placeholder="Номер телефона*"
             type="tel"
           />
-          <input name="comment" placeholder="Коментарий" type="text" />
+          <input
+            name="comment"
+            maxlength="100"
+            placeholder="Коментарий"
+            type="text"
+          />
           <button class="formBlock_btn">Заказать консультацию</button>
         </form>
       </div>
@@ -398,6 +416,7 @@
         <a href="gallery.html" class="works_btn">Больше примеров</a>
       </div>
     </section>
+
     <footer class="footer">
       <div class="footer_divider"></div>
       <div class="footer_wrapper">
@@ -443,11 +462,52 @@
       </div>
       <div class="footer_copyright">© MyBalcon, 2021</div>
     </footer>
+
+    <div class="overlay">
+      <div class="popup" id="consultation">
+        <div class="popup_close">&times;</div>
+        <div class="popup_subtitle">Просто заполните форму заявки</div>
+        <div class="popup_descr">и наш специалист вам перезвонит</div>
+        <form action="#" class="popup_form">
+          <input
+            required
+            minlength="2"
+            maxlength="12"
+            name="name"
+            placeholder="Ваше имя*"
+            type="text"
+          />
+          <input
+            required
+            minlength="10"
+            maxlength="20"
+            name="phone"
+            placeholder="Номер телефона*"
+            type="tel"
+          />
+          <input
+            name="comment"
+            maxlength="100"
+            placeholder="Коментарий"
+            type="text"
+          />
+          <button class="popup_btn">Заказать консультацию</button>
+        </form>
+      </div>
+      <div class="popup popup_mini" id="thanks">
+        <div class="popup_close">&times;</div>
+        <div class="popup_subtitle">Спасибо за заявку!</div>
+        <div class="popup_descr">
+          Наш специалист свяжется с вами в ближайшее время!
+        </div>
+      </div>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
       crossorigin="anonymous"
     ></script>
+    <script src="js/jquery-3.6.0.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
