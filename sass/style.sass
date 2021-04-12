@@ -348,8 +348,9 @@
 			text-decoration: none
 
 .carousel
-	margin-top: 100px
+	margin-top: 30px
 	z-index: 1
+	
 	&::before
 		content: ""
 		display: block
@@ -357,6 +358,10 @@
 		width: 100%
 		height: 10px
 		background-color: #FF6700
+	img
+		height: 800px
+		object-fit: cover
+		
 
 .footer
 	min-height: 200px
@@ -427,6 +432,7 @@
 		justify-content: center
 		position: relative
 		width: 350px
+		height: 340px
 		margin: 0 auto 50px auto
 		&::before
 			content: ""
@@ -438,6 +444,7 @@
 			background-color: #FF6700
 	&_img
 		width: inherit
+		object-fit: cover
 		
 
 
@@ -552,9 +559,14 @@
 			&_descr
 				font-size: 16px
 			
+	.carousel
+		img
+			height: 700px
+
 	.gallery
 		&_item
 			width: 300px
+			height: 290px
 
 	.privacy
 		min-height: 2600px
@@ -634,6 +646,9 @@
 
 	.works
 		min-height: 800px
+		.carousel
+			img
+				height: 500px
 		
 	.footer
 		&_logo
@@ -647,6 +662,7 @@
 	.gallery
 		&_item
 			width: 328px
+			height: 318px
 
 	.privacy
 		min-height: 3100px
@@ -795,11 +811,14 @@
 		min-height: 700px
 		.carousel
 			margin-top: 50px
+			img
+				height: 450px
 		
 	.gallery
 		padding-top: 75px
 		&_item
 			width: 450px
+			height: 440px
 	
 	.privacy
 		min-height: 3100px
@@ -895,7 +914,7 @@
 			font-size: 32px
 	
 	.works
-		padding: 25px 0
+		padding: 25px 10px
 		min-height: 560px
 		.subheader
 			font-size: 32px
@@ -903,6 +922,9 @@
 			width: 280px
 			height: 60px
 			font-size: 22px
+		.carousel
+			img
+				height: 300px
 	
 
 	.footer
@@ -927,6 +949,7 @@
 	.gallery
 		&_item
 			width: 300px
+			height: 290px
 			margin-bottom: 35px
 	
 	.privacy

@@ -43,3 +43,13 @@ $("form").submit(function (e) {
   });
   return false;
 });
+
+// gallery popup
+$(document).ready(function () {
+  $(".gallery_item").magnificPopup({
+    type: "image",
+    gallery: {
+      enabled: true,
+    },
+  });
+});
